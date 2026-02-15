@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="14">
+ <tileset firstgid="1" name="tiny_town_tiles" tilewidth="16" tileheight="16" tilecount="132" columns="12">
+  <image source="kenney_tiny-town/Tilemap/tilemap_packed.png" width="192" height="176"/>
+ </tileset>
+ <tileset firstgid="133" name="roguelikeChar_transparent" tilewidth="16" tileheight="16" tilecount="56" columns="7">
+  <image source="knights.png" width="112" height="128"/>
+ </tileset>
+ <layer id="1" name="Ground" width="25" height="20">
+  <data encoding="csv">
+2,1,2,2,1,1,1,1,2,2,2,2,2,1,2,1,25,26,26,26,26,26,26,26,26,
+1,2,1,2,1,1,1,2,2,1,1,1,2,2,2,1,25,26,26,26,26,26,26,26,26,
+1,2,1,1,1,2,1,2,2,1,1,2,1,3,2,2,25,26,26,26,26,26,26,26,26,
+1,2,2,2,2,1,1,1,1,1,2,1,2,1,2,2,37,38,26,26,26,26,26,26,26,
+1,3,2,1,1,44,3,1,1,1,1,2,2,3,2,2,2,2,37,38,38,38,38,38,39,
+2,2,1,2,1,44,44,44,44,44,2,1,2,1,2,1,1,2,3,1,1,1,1,2,2,
+1,2,2,2,2,1,1,1,1,44,2,1,2,2,2,1,1,2,2,1,2,1,2,2,2,
+2,1,1,1,1,1,1,2,1,44,1,2,1,2,2,2,1,2,2,1,2,2,1,2,1,
+1,1,1,1,2,1,1,2,1,1,1,3,1,2,2,44,1,1,1,1,1,1,2,1,1,
+2,2,1,2,2,1,2,1,1,2,1,2,2,2,2,44,2,1,1,1,1,1,1,2,1,
+1,1,2,2,1,1,3,2,1,1,2,2,2,2,1,44,44,1,2,1,44,2,2,2,2,
+1,2,1,1,1,1,1,44,2,1,2,2,2,1,1,2,44,44,44,44,44,2,1,2,1,
+1,2,3,1,2,1,1,44,44,44,44,2,44,2,1,2,2,2,44,2,2,1,2,2,2,
+2,2,1,1,2,1,2,2,1,2,1,2,44,2,1,2,2,1,2,1,2,2,2,2,1,
+2,2,1,2,2,1,1,1,3,2,2,1,44,44,1,3,2,1,1,2,2,1,1,1,1,
+14,14,14,14,15,3,2,1,1,2,1,2,44,44,2,1,1,1,1,2,2,2,2,2,2,
+26,26,26,26,27,1,2,2,1,2,1,1,2,1,1,2,1,2,2,2,1,2,3,2,2,
+26,26,26,26,26,14,14,15,2,1,1,1,1,2,1,1,1,1,1,2,1,2,2,1,1,
+26,26,26,26,26,26,26,27,2,2,2,1,2,2,2,44,44,2,1,2,1,1,1,2,2,
+26,26,26,26,26,26,26,27,1,1,1,1,3,2,1,1,1,1,2,2,2,1,2,1,1
+</data>
+ </layer>
+ <layer id="3" name="Obstacles" width="25" height="20">
+  <properties>
+   <property name="collides" type="bool" value="true"/>
+  </properties>
+  <data encoding="csv">
+8,8,8,0,65,56,66,67,0,0,0,0,0,0,0,0,28,0,0,0,0,0,0,28,0,
+20,20,20,9,65,66,66,67,53,54,55,0,0,0,0,0,0,0,0,28,0,0,0,0,0,
+20,20,20,33,77,89,78,80,65,66,67,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+20,20,33,0,77,90,78,80,77,90,80,0,0,0,0,0,0,0,0,30,0,0,30,0,0,
+20,20,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+32,32,0,0,0,0,0,0,0,0,0,0,0,0,49,50,51,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,64,63,5,0,53,54,55,0,0,0,
+0,0,0,0,0,0,0,0,0,0,29,0,81,82,73,86,76,17,0,65,68,67,0,0,0,
+0,45,46,46,46,49,52,50,51,0,0,0,0,0,0,0,0,0,0,77,90,80,0,0,0,
+0,57,95,0,95,61,63,64,63,0,0,0,0,0,0,0,0,29,0,0,0,0,0,0,0,
+29,69,83,0,81,73,85,86,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,131,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,93,0,0,0,0,0,0,0,0,29,0,0,0,0,
+0,0,4,0,0,0,0,0,0,0,0,105,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,8,8,8,8,8,
+0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,19,20,20,20,20,20,
+0,0,28,0,4,0,0,16,0,0,0,81,82,83,0,0,0,0,0,19,20,20,20,20,20,
+0,0,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,20,20,20,20,20,
+0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0,19,20,20,20,20,20
+</data>
+ </layer>
+ <objectgroup id="4" name="NPCs">
+  <object id="3" name="MushRoomie" type="NPC" gid="168" x="256.5" y="239.5" width="16" height="16">
+   <properties>
+    <property name="dialogue" value="Greetings... I am Mush-Roomie. This box was grown from mushroom roots! It’s stronger than foam and returns to the earth when you're done. Very chill vibes."/>
+   </properties>
+  </object>
+  <object id="5" gid="161" x="256.5" y="223.5" width="16" height="16"/>
+  <object id="6" name="KernelPop" type="NPC" gid="140" x="323" y="64.5" width="16" height="16">
+   <properties>
+    <property name="dialogue" value="Welcome to my patch! I’m Kernel Pop. This packaging is made from cornstarch! It’s biodegradable and smells faintly of a movie theater if you believe hard enough."/>
+   </properties>
+  </object>
+  <object id="7" gid="133" x="322" y="48.5" width="16" height="16"/>
+  <object id="8" name="SaltySal" type="NPC" gid="173" x="80" y="95.5" width="16" height="16">
+   <properties>
+    <property name="dialogue" value="Sup, dude? I’m Salty Sal. Check out this seaweed wrap. It’s plastic-free and totally edible. Don't eat my hat though, that's actual kelp."/>
+   </properties>
+  </object>
+  <object id="9" gid="166" x="80" y="79.5" width="16" height="16"/>
+  <object id="10" name="BambBoomer" type="NPC" gid="157" x="240.5" y="145" width="16" height="16">
+   <properties>
+    <property name="dialogue" value="Back in my day, we didn't have this 'plastic' junk! Bamboo grows a yard a day and makes the sturdiest boxes in the village. Now get off my lawn!"/>
+   </properties>
+  </object>
+  <object id="11" name="QueenBee" type="NPC" gid="141" x="48.5" y="175.5" width="16" height="16">
+   <properties>
+    <property name="dialogue" value="I'm buzzy! These Beeswax wraps are the secret to keeping food fresh. They're washable, reusable, and smell like a summer afternoon!"/>
+   </properties>
+  </object>
+  <object id="13" name="PlayerSpawn" x="168" y="310.5"/>
+ </objectgroup>
+</map>

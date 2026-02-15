@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wraptopia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /* Hidden preload to force font download */
+        #font-preload {
+            font-family: 'Press Start 2P', monospace;
+            position: absolute;
+            left: -9999px;
+            visibility: hidden;
+        }
+
+        /* ── Dialogue box overlay ── */
+        #dialogue-box {
+            display: none;
+            position: fixed;
+            bottom: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(520px, 85vw);
+            padding: 14px 18px;
+            font-family: 'Press Start 2P', monospace;
+            z-index: 1000;
+
+            /* 9-slice border from the UI tile */
+            border-style: solid;
+            border-width: 18px;
+            border-image-source: url('assets/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0000.png');
+            border-image-slice: 6 fill;
+            border-image-repeat: round;
+            image-rendering: pixelated;
+        }
+
+        #npc-name {
+            color: #8b5e14;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        #dialogue-text {
+            color: #3b2610;
+            font-size: 10px;
+            line-height: 1.8;
+            min-height: 48px;
+        }
+
+        #dialogue-hint {
+            text-align: right;
+            color: #a08060;
+            font-size: 8px;
+            margin-top: 6px;
+            visibility: hidden;
+        }
+
+        /* ── Controls hint ── */
+        #controls-hint {
+            display: none;
+            position: fixed;
+            bottom: 8px;
+            right: 12px;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 8px;
+            color: #aaaaaa;
+            z-index: 999;
+            text-align: right;
+            line-height: 2;
+            opacity: 0.7;
+        }
+        #controls-hint span {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="font-preload">.</div>
+
+    <!-- Controls hint -->
+    <div id="controls-hint">
+        <span>&#9650; &#9660; &#9664; &#9654; Move</span>
+        <span>SPACE Talk</span>
+    </div>
+
+    <!-- Dialogue box (outside canvas, pure HTML) -->
+    <div id="dialogue-box">
+        <div id="npc-name"></div>
+        <div id="dialogue-text"></div>
+        <div id="dialogue-hint">SPACE &gt;&gt;</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
